@@ -61,12 +61,4 @@ ctest --preset windows-vcpkg
 
 Папки `build/`, `.vs/` та тимчасові файли не завантажувати; вони виключені в `.gitignore`.
 
-## Виправлення для Visual Studio (листопад 2026)
-
-- `vcpkg.json` містить справжній `builtin-baseline` із Git-репозиторію користувача.
-- `CMakePresets.json` використовує `C:/vcpkg/scripts/buildsystems/vcpkg.cmake`. Якщо vcpkg розташовано в іншій папці, змініть цей шлях.
-- Файл `vcpkg-configuration.json` із некоректним `baseline: "default"` не потрібен.
-- У коді більше немає звернення до захищеного методу `sqlite_orm::storage_base::get_connection()`.
-- Демонстрація SQLite C API використовує власну тимчасову базу даних, а ORM — окрему тимчасову базу. Це порівняння способів роботи, а не тест двох API над одним підключенням.
-- Якщо після зміни toolchain лишилися старі помилки, виконайте **Project > Delete Cache and Reconfigure**.
 

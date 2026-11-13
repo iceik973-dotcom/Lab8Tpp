@@ -1,0 +1,9 @@
+build/
+out/
+.vs/
+.vscode/
+*.db
+*.db-journal
+*.exe
+*.obj
+*.pdb
